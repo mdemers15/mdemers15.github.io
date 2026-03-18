@@ -807,7 +807,6 @@
       .footer-accordion-trigger { display: none; }
       .footer-accordion-content { max-height: none !important; overflow: visible !important; padding-bottom: 0 !important; }
       .footer-col-title { display: flex; }
-      .mobile-cta-bar { display: none !important; }
     } /* end @media (min-width: 769px) */
 
     /* ── Ultrawide cap ── */
@@ -841,9 +840,6 @@
       .grid-2 { display: grid; grid-template-columns: 1fr; gap: var(--gap-md); }
 
       .btn { padding: 1rem 2rem; font-size: 0.82rem; min-height: 52px; width: 100%; justify-content: center; }
-
-      /* Floating CTA bar safe-area spacing */
-      body { padding-bottom: max(90px, calc(var(--safe-bottom) + 90px)); }
 
       .nav { padding: 1rem 0; padding-top: max(1rem, var(--safe-top)); }
       .nav-links { display: none; }
@@ -904,7 +900,6 @@
       .footer-brand { max-width: 100%; }
       .footer-grid { grid-template-columns: 1fr; gap: 0; padding: 0; border-bottom: none; }
       .footer-accordion-item { border-top: 1px solid rgba(255,255,255,0.08); }
-      .footer-accordion-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
       .footer-accordion-trigger {
         display: flex; align-items: center; justify-content: space-between;
         width: 100%; padding: 1.1rem 0; background: none;
@@ -928,38 +923,9 @@
       }
       .footer-col-title { display: none; }
       .footer-bottom { flex-direction: column-reverse; align-items: center; text-align: center; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 1.5rem; }
-      .footer-made-with { display: none; }
       .footer-link-item { min-height: 50px; }
       .social-pill { padding: 0.7rem 1.1rem; }
 
-      .mobile-cta-bar {
-        display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
-        background: #fff; border-top: 2px solid #000;
-        padding: 0.75rem 1rem; padding-bottom: max(0.75rem, var(--safe-bottom));
-        gap: 0.75rem;
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
-      }
-      .mobile-cta-bar.is-hidden {
-        opacity: 0;
-        transform: translateY(100%);
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
-      }
-      .mobile-cta-bar a {
-        flex: 1; padding: 0.85rem 0.5rem; border-radius: 999px;
-        font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
-        text-transform: uppercase; min-height: 48px;
-        display: flex; align-items: center; justify-content: center;
-        transition: transform 0.25s var(--ease-bounce), box-shadow 0.25s ease;
-      }
-      .mobile-cta-bar a:active { transform: scale(0.96); }
-      .mobile-cta-bar .cta-visit { background: #000; color: #fff; border: 2px solid #000; }
-      .mobile-cta-bar .cta-shop { background: var(--color-magenta); color: #fff; border: 2px solid var(--color-magenta); }
-      
       .newsletter-form { flex-direction: column; }
     }
 
@@ -1295,11 +1261,6 @@
 
   </main>
 
-  <div class="mobile-cta-bar" role="complementary" aria-label="Quick actions">
-    <a href="visit.html" class="cta-visit">Visit Us</a>
-    <a href="https://www.discogs.com/seller/TinyVinylShop/profile" target="_blank" rel="noopener noreferrer" aria-label="Shop Discogs (Opens in a new tab)" class="cta-shop">Shop Discogs ↗</a>
-  </div>
-
   <!-- ══════════════════════════════════════════════
        PRE-FOOTER CTA BAND
   ════════════════════════════════════════════════ -->
@@ -1453,7 +1414,7 @@
       <!-- BOTTOM BAR -->
       <div class="footer-bottom">
         <span class="footer-copyright">
-          © 2026 Tiny Vinyl Shop · Washington DC ·
+          © 2026 Tiny Vinyl Shop · Washington DC
         </span>
         <span class="footer-made-with" aria-label="Made with love in Adams Morgan">
           Made with <span class="heart" aria-hidden="true">♥</span> by Madeline Demers
@@ -1578,15 +1539,6 @@
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
     }
 
-    /* ── Mobile CTA Bar ── */
-    const ctaBar = document.querySelector('.mobile-cta-bar');
-    const footer = document.querySelector('footer');
-    if (ctaBar && footer) {
-      const footerObserver = new IntersectionObserver((entries) => {
-        ctaBar.classList.toggle('is-hidden', entries[0].isIntersecting);
-      }, { threshold: 0, rootMargin: '0px 0px -80px 0px' });
-      footerObserver.observe(footer);
-    }
   </script>
   <script>
     /* ── Footer: Mobile accordion ── */
