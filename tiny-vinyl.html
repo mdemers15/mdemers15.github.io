@@ -479,7 +479,6 @@
     .highlight-item:hover { transform: translateX(10px); border-left-color: var(--color-magenta); }
     .highlight-price { font-family: var(--font-mono); color: var(--color-magenta); font-weight: 700; }
     
-    .mascot-strip { background: var(--bg-surface); }
     .mascot-strip .container { display: flex; align-items: center; }
 
     .mascot-image {
@@ -965,11 +964,11 @@
 
     <!-- Nav links -->
     <nav class="mobile-menu-nav" aria-label="Mobile navigation">
-      <a href="visit.html" class="mobile-menu-link">
-        <span class="mobile-menu-num">01</span>Visit Us
+      <a href="shop.html" class="mobile-menu-link">
+        <span class="mobile-menu-num">01</span>Shop
       </a>
-      <a href="market.html" class="mobile-menu-link">
-        <span class="mobile-menu-num">02</span>Market
+      <a href="services.html" class="mobile-menu-link">
+        <span class="mobile-menu-num">02</span>Services
       </a>
       <a href="events.html" class="mobile-menu-link">
         <span class="mobile-menu-num">03</span>Events
@@ -984,13 +983,13 @@
 
     <!-- Shop CTA -->
     <a href="https://www.discogs.com/seller/TinyVinylShop/profile" target="_blank" rel="noopener noreferrer"
-       aria-label="Shop Discogs (Opens in a new tab)" class="mobile-menu-cta">
-      Shop Discogs ↗
+       aria-label="Shop Online (Opens in a new tab)" class="mobile-menu-cta">
+      Discogs ↗
     </a>
 
     <!-- Info strip -->
     <div class="mobile-menu-info">
-      <span class="mobile-menu-info-label">Find Us</span>
+      <span class="mobile-menu-info-label">Our Brick & Mortar</span>
       <p class="mobile-menu-address">2501 Champlain St NW<br>Adams Morgan, DC</p>
       <div id="mobile-open-badge" class="mobile-menu-status">
         <span class="mobile-menu-status-dot" aria-hidden="true"></span>
@@ -1006,11 +1005,15 @@
         <span class="nav-logo-text">TINY<span style="color:var(--color-magenta)"> VINYL</span> SHOP</span>
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="visit.html">Visit Us</a></li>
-        <li><a href="market.html">Market</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <!-- Add in submenu items for Tunes, Gear, Goods -->
+        <li><a href="services.html">Services</a></li>
+        <!-- Add in sub-items: Sell & Trade, Audio Repair -->
         <li><a href="events.html">Events</a></li>
+        <!-- Add in sub-items vintage market, calendar -->
         <li><a href="about.html">About</a></li>
-        <li><a href="https://www.discogs.com/seller/TinyVinylShop/profile" target="_blank" rel="noopener noreferrer" aria-label="Shop Discogs (Opens in a new tab)" class="nav-cta">Shop Discogs ↗</a></li>
+        <!-- Add in sub-items: Hours, Location, Contact, Story -->
+        <li><a href="https://www.discogs.com/seller/TinyVinylShop/profile" target="_blank" rel="noopener noreferrer" aria-label="Shop Online (Opens in a new tab)" class="nav-cta">Discogs ↗</a></li>
       </ul>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="nav-hamburger-lines" aria-hidden="true">
@@ -1054,7 +1057,7 @@
 
     <div class="ticker" aria-label="Store highlights" aria-live="off">
       <div class="ticker-track" aria-hidden="true">
-        <span class="ticker-item">Vinyl from $0 • Jazz Sundays • Adams Morgan, DC • Open 7 Days • CDs 4 for $10 • We Buy &amp; Trade • Record Store Day • Vintage Market Every Weekend •</span>
+        <span class="ticker-item">Vinyl from $0 • Jazz Sundays • Open 7 Days • CDs 4 for $10 • We Buy &amp; Trade • Record Store Day • Vintage Market Every Weekend •</span>
         <span class="ticker-item">Vinyl from $0 • Jazz Sundays • Adams Morgan, DC • Open 7 Days • CDs 4 for $10 • We Buy &amp; Trade • Record Store Day • Vintage Market Every Weekend •</span>
       </div>
     </div>
@@ -1068,8 +1071,8 @@
         <div class="grid-4" style="align-items: stretch;">
 
           <!-- Card 1: Visit Us -->
-          <a href="visit.html" class="quick-card reveal">
-            <span class="label">In-Store</span>
+          <a href="about.html" class="quick-card reveal">
+            <span class="label">Drop By</span>
             <h3>Visit Us</h3>
             <div class="qc-body">
               <p class="qc-address">2501 Champlain St NW, Washington DC</p>
@@ -1084,22 +1087,40 @@
                 <span class="qc-pulse-dot" aria-hidden="true"></span>
                 <span class="qc-badge-text">Checking…</span>
               </div>
+              <!-- Only display if open now -->
             </div>
             <span class="qc-spacer"></span>
             <span class="quick-card-link">Directions →</span>
           </a>
 
-          <!-- Card 2: Shop Online -->
+          <!-- Card 2: What We Offer -->
+          <a href="shop.html" class="quick-card reveal">
+            <span class="label">In-Store</span>
+            <h3>What We Offer</h3>
+            <div class="qc-body">
+              <ul class="qc-feature-rows" aria-label="Offerings details">
+                <li><span class="qc-event-icon" aria-hidden="true">◈</span>Buy, Sell, Trade, &amp; Repair</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◈</span>Vinyl, CDs, Cassettes</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◈</span>Audio Gear</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◈</span>Upcycled Goods</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◈</span>Gift Certificates</li>
+              </ul>
+            </div>
+            <span class="qc-spacer"></span>
+            <span class="quick-card-link">Learn More →</span>
+          </a>
+
+          <!-- Card 3: Shop Online -->
           <a href="https://www.discogs.com/seller/TinyVinylShop/profile" target="_blank" rel="noopener noreferrer" aria-label="Shop Online on Discogs (Opens in a new tab)" class="quick-card reveal">
             <span class="label">Online</span>
             <h3>Shop Online</h3>
             <div class="qc-body">
               <ul class="qc-feature-rows" aria-label="Online shop features">
-                <li><span class="qc-row-glyph" aria-hidden="true">◉</span>Full Discogs catalogue</li>
-                <li><span class="qc-row-glyph" aria-hidden="true">◎</span>Local pickup available</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◎</span>Full Discogs catalog</li>
+                <li><span class="qc-event-icon" aria-hidden="true">◎</span>Local pickup available</li>
               </ul>
               <p class="qc-detail-line">
-                <span class="qc-row-glyph" aria-hidden="true">↻</span>New arrivals weekly
+                <span class="qc-event-icon" aria-hidden="true">↻</span>New arrivals weekly
               </p>
               <div class="qc-live-badge qc-badge--teal" aria-label="Shop always available online">
                 <span class="qc-pulse-dot qc-pulse-dot--teal" aria-hidden="true"></span>
@@ -1108,24 +1129,6 @@
             </div>
             <span class="qc-spacer"></span>
             <span class="quick-card-link">Open Discogs →</span>
-          </a>
-
-          <!-- Card 3: Popup Market -->
-          <a href="market.html" class="quick-card reveal">
-            <span class="label">Weekend</span>
-            <h3>Vintage Market</h3>
-            <div class="qc-body">
-              <ul class="qc-feature-rows" aria-label="Market details">
-                <li><span class="qc-row-glyph" aria-hidden="true">◈</span>Every Sat &amp; Sun outside the shop</li>
-                <li><span class="qc-row-glyph" aria-hidden="true">◈</span>~7 rotating vintage vendors</li>
-              </ul>
-              <div id="qc-market-badge" class="qc-live-badge qc-badge--teal" aria-live="polite">
-                <span class="qc-pulse-dot qc-pulse-dot--teal" aria-hidden="true"></span>
-                <span class="qc-badge-text">Next: calculating…</span>
-              </div>
-            </div>
-            <span class="qc-spacer"></span>
-            <span class="quick-card-link">Learn More →</span>
           </a>
 
           <!-- Card 4: Events -->
@@ -1137,11 +1140,8 @@
                 <li><span class="qc-event-icon" aria-hidden="true">♪</span>Jazz Sundays</li>
                 <li><span class="qc-event-icon" aria-hidden="true">◎</span>Record Store Day</li>
                 <li><span class="qc-event-icon" aria-hidden="true">♬</span>Live Music</li>
+                <li><span class="qc-event-icon" aria-hidden="true">✧</span>Vintage Market</li>
               </ul>
-              <div class="qc-live-badge qc-badge--magenta" aria-label="Check full calendar">
-                <span class="qc-pulse-dot qc-pulse-dot--magenta" aria-hidden="true"></span>
-                <span class="qc-badge-text">Events year-round</span>
-              </div>
             </div>
             <span class="qc-spacer"></span>
             <span class="quick-card-link">See Full Calendar →</span>
@@ -1173,7 +1173,7 @@
             <div class="highlight-item reveal">
               <span class="highlight-price">$25</span>
               <h4>Original Tees</h4>
-              <p>Tiny Vinyl original t-shirts, upcycled coasters, stickers, and hand-made notebooks.</p>
+              <p>Tiny Vinyl original t-shirts, as well as upcycled coasters, stickers, and hand-made notebooks.</p>
             </div>
           </div>
         </div>
@@ -1184,17 +1184,25 @@
       <div class="container">
         <img src="assets/updated-logo.png" alt="Tiny Vinyl Mascot" class="mascot-image reveal" loading="lazy" width="180" height="180">
         <div style="flex: 1;" class="reveal">
-          <span class="label">Your Adams Morgan Record Guides</span>
-          <h3>We Know Our Records.</h3>
-          
-          <p>We buy all kinds of records and record collections, large and small. You're welcome to walk in with small lots, we'll make you a deal on the spot. For medium-to-larger collections it's best to email us. Please include as much info as you can about the collection and photos if you have them. We pay very competitive rates so you get a fair price!</p>
-          
-          <a href="visit.html" class="btn btn-primary" style="margin-top: 1rem;">Come Say Hi</a>
+          <span class="label">Your Local Record Guides</span>
+          <h3>About Us</h3>
+          <p>
+            We don't just sell records. We love to share music and make new friends! In shared space (with our friends at 
+            <a href="https://www.upshiftworkshop.com/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               style="color: #CD0282; font-weight: 600; text-decoration: none;">
+               Upshift Workshop
+            </a>) 
+            in the heart of Adams Morgan, Tiny Vinyl Shop is a gathering place for neighbors and visitors alike.
+          </p>
+
+          <a href="about.html" class="btn btn-primary" style="margin-top: 1rem;">Learn More</a>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="gift-trade-heading">
+    <!-- <section class="section" aria-labelledby="gift-trade-heading">
       <div class="container">
         <h2 id="gift-trade-heading" class="sr-only">Gift Cards and Trade</h2>
         <div class="grid-2">
@@ -1212,77 +1220,28 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="section" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="community-inner">
-          <div class="reveal">
-            <span class="label">A Neighborhood Place for Music Lovers</span>
-            <h2 id="about-heading">About Us</h2>
-            <p>We don't just sell records. We love to share music and make new friends! In shared space in the heart of Adams Morgan, Tiny Vinyl Shop is a gathering place for neighbors and visitors alike.</p>
-            <p style="margin-top: 1.5rem;">You'll find us one block East of Columbia Rd., across from The Line Hotel — right on the D72/D74/C51 bus line.</p>
-          </div>
-          <div class="reveal">
-            <a href="https://instagram.com/tinyvinylshop" class="community-link-item" rel="noopener noreferrer" target="_blank" aria-label="Follow on Instagram (Opens in a new tab)">
-              <span class="community-link-icon" aria-hidden="true">📸</span>
-              <div style="flex:1">
-                <strong>Follow on Instagram</strong><br>
-                <span>@tinyvinylshop</span>
-              </div>
-              <span style="color:var(--color-teal)" aria-hidden="true">↗</span>
-            </a>
-            <a href="visit.html" class="community-link-item">
-              <span class="community-link-icon" aria-hidden="true">🕐</span>
-              <div style="flex:1">
-                <strong>Hours &amp; Directions</strong><br>
-                <span>Open every day</span>
-              </div>
-              <span style="color:var(--color-teal)" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+
     
     <section class="section section--surface" aria-labelledby="newsletter-heading">
         <div class="container" style="text-align: center; max-width: 600px;">
           <div class="reveal">
             <span class="label">Stay in the Loop</span>
             <h2 id="newsletter-heading">Join the Mailing List</h2>
-            <p style="margin-bottom: 2rem;">Get notified about new arrivals, pop-up markets, and upcoming events in the neighborhood.</p>
+            <p style="margin-bottom: 2rem;">Receive our weekly newsletter with new items, updates on locations and times, and exclusive special offers just for you. We are respectful of your inbox we won't spam ya!</p>
             <form class="newsletter-form" style="display: flex; gap: 0.75rem; max-width: 450px; margin: 0 auto;">
               <input type="email" class="form-input" placeholder="Your email address" required aria-label="Email address for newsletter">
-              <button type="submit" class="btn btn-primary" style="flex-shrink: 0;">Subscribe</button>
-            </form>
+              <a href="mailto:tcumbie62@gmail.com?subject=Newsletter%20Subscription&body=Hi%20Tiny%20Vinyl%20Shop%2C%0D%0A%0D%0AI'd%20like%20to%20subscribe%20to%20your%20newsletter%20to%20hear%20about%20new%20arrivals%20and%20upcoming%20events.%0D%0A%0D%0AThank%20you!" 
+   class="btn btn-primary" 
+   style="display: inline-block; flex-shrink: 0; text-decoration: none;">
+   Subscribe
+</a>            </form>
           </div>
         </div>
       </section>
 
   </main>
-
-  <!-- ══════════════════════════════════════════════
-       PRE-FOOTER CTA BAND
-  ════════════════════════════════════════════════ -->
-  <!-- <div class="footer-cta-band" role="complementary" aria-label="Visit the shop">
-    <div class="footer-cta-inner">
-      <div class="footer-cta-text">
-        Come say <em>hi.</em><br>We're open every day.
-      </div>
-      <div class="footer-cta-actions">
-        <a href="visit.html" class="footer-cta-btn footer-cta-btn-primary" aria-label="Get directions to Tiny Vinyl Shop">
-          Get Directions
-        </a>
-        <a href="https://www.discogs.com/seller/TinyVinylShop/profile"
-           class="footer-cta-btn footer-cta-btn-outline"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Shop online on Discogs (opens in a new tab)">
-          Shop Discogs ↗
-        </a>
-      </div>
-    </div>
-  </div> -->
 
   <!-- ══════════════════════════════════════════════
        MAIN FOOTER
@@ -1323,18 +1282,13 @@
             </svg>
             @tinyvinylshop
           </a>
-          <a href="contact.html" class="social-pill" aria-label="Contact Tiny Vinyl Shop">
+          <a href="mailto:tcumbie62@gmail.com" class="social-pill" aria-label="Email Tiny Vinyl Shop">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-            Say Hello
-          </a>
-          <a href="market.html" class="social-pill" aria-label="Weekend vintage market">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            </svg>
-            Tiny Vintage Market
-          </a>
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg> Email          
+        </a>
+          <!-- Change this to email  -->
         </nav>
       </div>
 
@@ -1356,10 +1310,16 @@
               <strong>2501 Champlain Street NW</strong>
               Washington, DC 20009<br>Adams Morgan
             </address>
-            <a href="visit.html" class="footer-map-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              View on Map
-            </a>
+            <a href="https://maps.app.goo.gl/S3ccmHgzdyJUqMVb8" 
+   class="footer-map-link" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </svg>
+  View on Map
+</a>
           </div>
         </div>
 
@@ -1399,12 +1359,11 @@
           <div class="footer-accordion-content" id="footer-acc-links" role="region" aria-labelledby="footer-acc-links-btn">
             <nav aria-label="Footer navigation">
               <ul class="footer-links-list">
-                <li><a href="visit.html" class="footer-link-item">Visit Us<span class="link-arrow" aria-hidden="true"></span></a></li>
-                <li><a href="https://www.discogs.com/seller/TinyVinylShop/profile" class="footer-link-item external" target="_blank" rel="noopener noreferrer" aria-label="Shop on Discogs (opens in a new tab)">Shop Discogs<span class="link-arrow" aria-hidden="true"></span></a></li>
-                <li><a href="market.html" class="footer-link-item">Vintage Market<span class="link-arrow" aria-hidden="true"></span></a></li>
+                <li><a href="shop.html" class="footer-link-item">Shop<span class="link-arrow" aria-hidden="true"></span></a></li>
+                <li><a href="services.html" class="footer-link-item">Services<span class="link-arrow" aria-hidden="true"></span></a></li>
                 <li><a href="events.html" class="footer-link-item">Events<span class="link-arrow" aria-hidden="true"></span></a></li>
-                <li><a href="contact.html" class="footer-link-item">Contact<span class="link-arrow" aria-hidden="true"></span></a></li>
                 <li><a href="about.html" class="footer-link-item">About<span class="link-arrow" aria-hidden="true"></span></a></li>
+                <li><a href="https://www.discogs.com/seller/TinyVinylShop/profile" class="footer-link-item external" target="_blank" rel="noopener noreferrer" aria-label="Shop on Discogs (opens in a new tab)">Discogs<span class="link-arrow" aria-hidden="true"></span></a></li>
               </ul>
             </nav>
           </div>
@@ -1417,8 +1376,7 @@
           © 2026 Tiny Vinyl Shop · Washington DC
         </span>
         <span class="footer-made-with" aria-label="Made with love in Adams Morgan">
-          Made with <span class="heart" aria-hidden="true">♥</span> by Madeline Demers
-        </span>
+          Made with <span class="heart" aria-hidden="true">♥</span></span>
         <a href="#top" class="footer-back-to-top" aria-label="Back to top of page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <line x1="12" y1="19" x2="12" y2="5"/>
