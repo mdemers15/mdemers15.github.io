@@ -311,12 +311,6 @@
     .highlight-item.reveal:nth-child(2) { transition-delay: 0.1s; }
     .highlight-item.reveal:nth-child(3) { transition-delay: 0.2s; }
 
-    /* ── Spin toggle button pulse ── */
-    .spin-toggle {
-      transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease;
-    }
-    .spin-toggle:hover { transform: scale(1.12); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
-    .spin-toggle:active { transform: scale(0.95); }
 
     /* ── Reduced motion safety net ── */
     @media (prefers-reduced-motion: reduce) {
@@ -359,7 +353,6 @@
       .hero-btns { display: flex; gap: 1rem; }
 
       .record-wrap { position: relative; width: clamp(280px, 30vw, 380px); height: clamp(280px, 30vw, 380px); display: flex; align-items: center; justify-content: center; }
-      .spin-toggle { position: absolute; bottom: -10px; right: -10px; background: #000; color: #fff; width: 64px; height: 64px; border-radius: 50%; z-index: 10; font-family: var(--font-mono); font-size: 0.65rem; border: 2px solid #fff; }
 
       .ticker { padding: 1.2rem 0; font-size: 0.85rem; }
       .ticker-item { padding: 0 2rem; }
@@ -584,7 +577,7 @@
                 <div class="record-hole" aria-hidden="true"></div>
               </div>
             </div>
-            <button class="spin-toggle" id="spin-toggle" aria-label="Pause record spinning">PAUSE</button>
+
           </div>
         </div>
       </div>
@@ -817,22 +810,6 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && menuOpen) toggleMenu(false);
-    });
-
-    /* ── Record Spin Toggle ── */
-    const record = document.getElementById('vinyl-record');
-    const spinBtn = document.getElementById('spin-toggle');
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-      record.classList.remove('spinning');
-      spinBtn.textContent = 'PLAY';
-    }
-
-    spinBtn.addEventListener('click', () => {
-      const isSpinning = record.classList.toggle('spinning');
-      spinBtn.textContent = isSpinning ? 'PAUSE' : 'PLAY';
-      spinBtn.setAttribute('aria-label', isSpinning ? 'Pause record spinning' : 'Play record spinning');
     });
 
     /* ── Scroll Nav ── */
