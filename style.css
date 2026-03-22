@@ -141,6 +141,16 @@ nav a:hover { opacity: 1; }
     line-height: 1.1;
 }
 
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: clamp(1.75rem, 8vw, 2.4rem);
+    }
+    .hero-content h1 span[style],
+    .hero-content h1 em span[style] {
+        white-space: normal !important;
+    }
+}
+
 .hero-content h1 em { font-style: italic; }
 
 .hero-illustration {
